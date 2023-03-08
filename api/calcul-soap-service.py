@@ -3,7 +3,6 @@ from spyne import Iterable
 from spyne.protocol.soap import Soap11
 from spyne.server.wsgi import WsgiApplication
 from wsgiref.simple_server import make_server
-import math
 
 
 class CalculService(ServiceBase):
@@ -33,7 +32,7 @@ application = Application([CalculService], 'info.802.calcul.soap',
 
 wsgi_application = WsgiApplication(application)
 
-application=wsgi_application
+app=wsgi_application
 
 #if __name__ == '__main__':
 #    server = make_server('127.0.0.1', 8000, wsgi_application)
