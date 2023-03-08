@@ -1,15 +1,14 @@
 {
-    "version": 2,
     "builds": [
-        {
-            "src": "./calcul-soap-service.py",
-            "use": "@vercel/python"
-        }
+      {
+        "src": "api/calcul-soap-service.py",
+        "use": "@vercel/python"
+      }
     ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/"
-        }
+      {
+        "src": "/(.*)",
+        "dest": "api/calcul-soap-service.py"
+      }
     ]
 }

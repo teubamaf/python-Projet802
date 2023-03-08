@@ -33,7 +33,8 @@ application = Application([CalculService], 'info.802.calcul.soap',
 
 wsgi_application = WsgiApplication(application)
 
+application=wsgi_application
 
-if __name__ == '__main__':
-    server = make_server('127.0.0.1', 8000, wsgi_application)
-    server.serve_forever()
+#if __name__ == '__main__':
+#    server = make_server('127.0.0.1', 8000, wsgi_application)
+#    server.serve_forever()
